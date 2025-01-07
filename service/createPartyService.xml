@@ -1,0 +1,11 @@
+<service verb="create" service-name="createParty" package-name="moqui.training">
+    <in-parameters>
+        <parameter name="partyType" type="text-short" required="true"/>
+        <parameter name="firstName" type="text"/>
+        <parameter name="lastName" type="text"/>
+    </in-parameters>
+    <out-parameters>
+        <parameter name="partyId" type="id-long"/>
+    </out-parameters>
+
+</service>

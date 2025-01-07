@@ -1,0 +1,22 @@
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-3.xsd">
+
+    <service verb="create" noun="MoquiTraining" type="entity-auto">
+        <in-parameters>
+            <auto-parameters include="all"/>
+            <!-- Input Parameters -->
+            <parameter name="trainingName" type="String" required="true"/>
+            <parameter name="trainingDate" type="Date" format="MM/dd/yyyy" required="true"/>
+        </in-parameters>
+        <out-parameters>
+            <!-- Output Parameters -->
+            <parameter name="trainingId" type="String"/>
+        </out-parameters>
+    </service>
+</services>
+
+
+
+
+
+
+
