@@ -1,0 +1,11 @@
+<service verb="create" service-name="createOrder" package-name="moqui.training">
+    <in-parameters>
+        <parameter name="orderDate" type="date" required="true"/>
+        <parameter name="partyId" type="id-long" required="true"/>
+        <parameter name="shippingContactMechId" type="id-long"/>
+        <parameter name="billingContactMechId" type="id-long"/>
+    </in-parameters>
+    <out-parameters>
+        <parameter name="orderId" type="id-long"/>
+    </out-parameters>
+</service>

@@ -1,0 +1,8 @@
+<entity entity-name="Party" package-name="moqui.training" is-view="false" primary-key-name="partyId">
+    <field name="partyId" type="id-long"/>
+    <field name="partyType" type="text-short" not-null="true"/>
+    <field name="firstName" type="text"/>
+    <field name="lastName" type="text"/>
+
+<relationship type="one" related-entity-name="Party" fk-name="partyId"/>
+</entity>

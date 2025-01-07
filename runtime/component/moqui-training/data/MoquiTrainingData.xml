@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-facade-xml>
+    <MoquiTraining trainingId="TR001" trainingName="Advanced Java" trainingDate="2025-01-05" trainingPrice="199.99" trainingDuration="8" />
+    <MoquiTraining trainingId="TR002" trainingName="Python for Data Science" trainingDate="2025-01-12" trainingPrice="149.99" trainingDuration="6" />
+</entity-facade-xml>
