@@ -1,1 +1,0 @@
-<rest-api uri="/products" service-name="moqui.training.createProduct" method="POST"/>

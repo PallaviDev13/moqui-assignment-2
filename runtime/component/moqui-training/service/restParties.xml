@@ -1,1 +1,0 @@
-<rest-api uri="/parties" service-name="moqui.training.createPartyService" method="POST"/>

@@ -1,1 +1,0 @@
-<rest-api uri="/orders" service-name="moqui.training.createOrderService" method="POST"/>
