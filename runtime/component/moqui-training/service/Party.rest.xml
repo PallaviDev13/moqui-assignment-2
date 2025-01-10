@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/rest-api-3.xsd"
+              name="Parties" displayName="Party REST API" version="2.0.0" require-authentication="anonymous-all">
+
+        <resource name="POST">
+            <resource name="parties">
+                <method type="post">
+                    <service name="moqui.party.PartyService.create#Party"/>
+                </method>
+                <id name="partyId">
+                    <resource name="contacts">
+                        <method type="post">
+                            <service name="moqui.contactMech.ContactMechService.create#ContactMech"/>
+                        </method>
+                    </resource>
+                </id>
+            </resource>
+        </resource>
+
+        <resource name="GET">
+            <resource name="parties">
+                <method type="get">
+                    <service name="moqui.party.PartyService.find#PartyFind"/>
+                </method>
+                <id name="partyId">
+                    <resource name="contacts">
+                        <method type="get">
+                            <entity name="contactMechAlias" operation="one" />
+                        </method>
+                    </resource>
+                </id>
+            </resource>
+        </resource>
+
+        <resource name="PUT">
+            <resource name="parties">
+                <method type="put">
+                    <service name="moqui.party.PartyService.store#PartyCreateOrUpdate"/>
+                </method>
+                <id name="partyId">
+                    <resource name="contacts">
+                        <method type="put">
+                            <service name="moqui.contactMech.ContactMechService.store#ContactMechCreateOrUpdate"/>
+                        </method>
+                    </resource>
+                </id>
+            </resource>
+        </resource>
+
+        <resource name="DELETE">
+            <resource name="partiesDelete">
+                <id name="partyId">
+                    <method type="delete">
+                        <service name="moqui.party.PartyService.delete#PartyDelete"/>
+                    </method>
+                </id>
+                <resource name="contacts">
+                    <id name="contactMechId">
+                        <method type="delete">
+                            <service name="moqui.contactMech.ContactMechService.delete#ContactMechDelete"/>
+                        </method>
+                    </id>
+                </resource>
+            </resource>
+        </resource>
+    </resource>

@@ -1,21 +1,23 @@
-<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-3.xsd">
+<?xml version="1.0" encoding="UTF-8" ?>
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-3.xsd">
 
-    <service  type ="inline" noun="MoquiTraining" verb="find">
-        <in-parameters>
-            <parameter name="trainingName" entity-name="moqui.training.MoquiTraining"/>
-            <parameter name="trainingId" entity-name="moqui.training.MoquiTraining"/>
-        </in-parameters>
-        <out-parameters>
-            <parameter name="trainingList" required="true"/>
-        </out-parameters>
-        <actions>
-            <entity-find entity-name="moqui.training.MoquiTraining" list="trainingList">
-                <econdition field-name="trainingName" ignore-if-empty="true"/>
-                <econdition field-name="trainingId" ignore-if-empty="true"/>
-                <select-field field-name="trainingId"/>
-                <select-field field-name="trainingName"/>
-                <select-field field-name="trainingDate"/>
-            </entity-find>
-        </actions>
-    </service>
-</services>
+        <service  type ="inline" noun="MoquiTraining" verb="find">
+            <in-parameters>
+                <parameter name="trainingName" entity-name="moqui.training.MoquiTraining"/>
+                <parameter name="trainingId" entity-name="moqui.training.MoquiTraining"/>
+            </in-parameters>
+            <out-parameters>
+                <parameter name="trainingList" required="true"/>
+            </out-parameters>
+            <actions>
+                <entity-find entity-name="moqui.training.MoquiTraining" list="trainingList">
+                    <econdition field-name="trainingName" ignore-if-empty="true"/>
+                    <econdition field-name="trainingId" ignore-if-empty="true"/>
+                    <select-field field-name="trainingId"/>
+                    <select-field field-name="trainingName"/>
+                    <select-field field-name="trainingDate"/>
+                </entity-find>
+            </actions>
+        </service>
+    </services>

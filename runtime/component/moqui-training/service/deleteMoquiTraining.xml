@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-3.xsd">
+        <service verb="delete" noun="MoquiTraining">
+        <in-parameters>
+            <parameter name="trainingId" required="true"/>
+        </in-parameters>
+
+        <out-parameters>
+            <parameter name="message" type="String">
+                <description>Result message</description>
+            </parameter>
+        </out-parameters>
+        <actions>
+            <entity-find-one entity-name="moqui.training.MoquiTraining" value-field="filterdata">
+                <field-map field-name="trainingId" from="context.trainingId"/>
+            </entity-find-one>
+            <entity-delete value-field="filterdata"/>
+
+            <set field="message" value="Training ${trainingId} deleted successfully"/>
+        </actions>
+    </service>
+</services>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/rest-api-3.xsd"
+              name="Product" displayName="Products REST API" version="1.0.0" require-authentication="anonymous-all">
+
+
+        <resource name="product">
+            <method type="post">
+                <service name="moqui.product.ProductService.create#Product"/>
+            </method>
+        </resource>
+
+
+        <resource name="findproduct">
+            <id name="productId">
+                <method type="get">
+                    <service name="moqui.product.ProductService.find#ProductFind"/>
+                </method>
+            </id>
+        </resource>
+
+        <resource name="listproduct">
+            <method type="get">
+                <service name="moqui.product.ProductService.find#ProductFind"/>
+            </method>
+        </resource>
+
+        <resource name="storeproduct">
+            <id name="productId">
+                <method type="put">
+                    <service name="moqui.product.ProductService.store#ProductCreateOrUpdate"/>
+                </method>
+            </id>
+        </resource>
+
+
+        <resource name="deleteproduct">
+            <id name="productId">
+                <method type="delete">
+                    <service name="moqui.product.ProductService.delete#ProductDelete"/>
+                </method>
+            </id>
+        </resource>
+    </resource>
